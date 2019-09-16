@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String_Validate _Email</title>
+</head>
+<body>
+<script>
+    function check_Validate (str){
+       let  regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$/;
+        //chu y
+        /*
+        *   ^ baắt  đầu 1 chuỗi  hoặc  1 dòng
+        *   [A -Za -z0-9]+ email bắt đầu với "[A-Za-zo-9] và có it nhất 1 ký  tự
+        *
+        * */
+            if(regexp.test(str)){
+                return true;
+            }else{
+                    return false;
+            }
+
+    }
+    function check(){
+        let check ="hieu92@gmail.com"
+        if(!check_Validate(check) === true){
+            document.write("Cú pháp hơp lệ")
+        }else{
+            document.write("Cú pháp không hơp lệ");
+        }
+    }
+
+    check();
+
+</script>
+
+</body>
+</html>
